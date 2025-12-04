@@ -1,4 +1,4 @@
-```json
+
 {
   "name": "react-fb-admin-form",
   "version": "1.0.0",
@@ -18,4 +18,3 @@
     "vite": "^5.0.0"
   }
 }
-```
