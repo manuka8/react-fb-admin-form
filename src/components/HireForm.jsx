@@ -429,7 +429,7 @@ export default function HireForm(){
             </div>
 
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Best Time to Post Content</label>
+              <label className="font-semibold mb-2 required">What time is best for posting content?</label>
               <input 
                 type="text" 
                 name="best_post_time" 
@@ -444,7 +444,7 @@ export default function HireForm(){
             </div>
 
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Meta Business Suite Skill Level</label>
+              <label className="font-semibold mb-2 required">How familiar are you with Meta Business Suite scheduling?</label>
               <select 
                 name="meta_skill" 
                 value={form.meta_skill}
