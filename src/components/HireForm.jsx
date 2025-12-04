@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 
 export default function HireForm(){
@@ -198,7 +199,7 @@ export default function HireForm(){
                 value={form.phone}
                 onChange={handleChange}
                 className={`w-full p-3 border-2 rounded-md transition-all ${errors.phone ? 'is-invalid' : ''}`}
-                placeholder="+1 (123) 456-7890"
+                placeholder="077 123 4567"
               />
               {errors.phone && <div className="invalid-feedback mt-1">
                 <i className="fas fa-exclamation-circle"></i> {errors.phone}
@@ -288,7 +289,7 @@ export default function HireForm(){
           
           <div className="grid grid-2 gap-4">
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Years of SMM Experience</label>
+              <label className="font-semibold mb-2 required">How many years of experience do you have in Social Media Management?</label>
               <input 
                 type="number" 
                 name="smm_experience" 
@@ -306,7 +307,7 @@ export default function HireForm(){
             </div>
 
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Managed Facebook Pages Before?</label>
+              <label className="font-semibold mb-2 required">Have you managed Facebook pages before?</label>
               <select 
                 name="managed_pages" 
                 value={form.managed_pages}
@@ -323,7 +324,7 @@ export default function HireForm(){
             </div>
 
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Provide Graphic Designs?</label>
+              <label className="font-semibold mb-2 required">Do you provide Graphic Designs?</label>
               <select 
                 name="graphic_designs" 
                 value={form.graphic_designs}
@@ -340,7 +341,7 @@ export default function HireForm(){
             </div>
 
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Facebook Ads Experience?</label>
+              <label className="font-semibold mb-2 required">Do you have experience running Facebook Ads?</label>
               <select 
                 name="fb_ads" 
                 value={form.fb_ads}
@@ -409,7 +410,7 @@ export default function HireForm(){
           
           <div className="grid grid-2 gap-4">
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Posting Frequency Recommendation</label>
+              <label className="font-semibold mb-2 required">What posting frequency do you recommend for a business page?</label>
               <select 
                 name="posting_frequency" 
                 value={form.posting_frequency}
