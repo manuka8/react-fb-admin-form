@@ -16,12 +16,37 @@ export async function connect(){
 }
 
 // Schema
+// Updated ApplicationSchema in api/_connect.js
 export const ApplicationSchema = new mongoose.Schema({
+  // Personal Information
   fullName: String,
   email: String,
   phone: String,
-  experienceYears: Number,
-  previousWorks: String,
+  age: Number,
+  city: String,
+  employed: String,
+  gender: String,
+  
+  // Social Media Experience
+  smm_experience: Number,
+  previous_experience: String,
+  managed_pages: String,
+  page_links: String,
+  graphic_designs: String,
+  fb_ads: String,
+  ads_experience: String,
+  
+  // Knowledge
+  organic_engagement: String,
+  negative_comments: String,
+  posting_frequency: String,
+  best_post_time: String,
+  meta_skill: String,
+  
+  // Salary
+  expected_salary: Number,
+  comments: String,
+  
   createdAt: { type: Date, default: Date.now }
 })
 
