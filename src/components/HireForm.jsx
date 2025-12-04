@@ -69,5 +69,4 @@ export default function HireForm(){
     </section>
   )
 }
-  
-}
+
