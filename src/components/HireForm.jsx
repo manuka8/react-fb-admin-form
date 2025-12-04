@@ -505,9 +505,9 @@ export default function HireForm(){
           
           <div className="grid grid-2 gap-4">
             <div className="form-group">
-              <label className="font-semibold mb-2 required">Expected Monthly Salary (USD)</label>
+              <label className="font-semibold mb-2 required">Expected Monthly Salary or Commision</label>
               <div className="relative">
-                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600">$</div>
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600">Rs</div>
                 <input 
                   type="number" 
                   name="expected_salary" 
