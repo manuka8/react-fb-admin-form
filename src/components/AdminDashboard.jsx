@@ -53,8 +53,9 @@ export default function AdminDashboard(){
       app.smm_experience && app.smm_experience > 0
     ).length
     
+    // Changed threshold to Rs 150,000
     const highSalary = applications.filter(app => 
-      app.expected_salary && app.expected_salary >= 2000
+      app.expected_salary && app.expected_salary >= 150000
     ).length
     
     setStats({
@@ -129,7 +130,7 @@ export default function AdminDashboard(){
     const headers = [
       'Name', 'Email', 'Phone', 'Age', 'City', 'Employment Status',
       'Gender', 'SMM Experience', 'Managed Pages', 'Graphic Design',
-      'FB Ads Exp', 'Expected Salary', 'Applied Date'
+      'FB Ads Exp', 'Expected Salary (Rs)', 'Applied Date'
     ]
     
     const csvData = apps.map(app => [
@@ -245,11 +246,11 @@ export default function AdminDashboard(){
               <p className="stat-value">{stats.highSalary}</p>
             </div>
             <div className="text-warning text-3xl">
-              <i className="fas fa-dollar-sign"></i>
+              <i className="fas fa-rupee-sign"></i> {/* Changed to rupee-sign */}
             </div>
           </div>
           <div className="mt-2 text-sm text-gray-600">
-            Salary ≥ $2,000/month
+            Salary ≥ Rs 150,000/month {/* Updated threshold */}
           </div>
         </div>
 
@@ -364,7 +365,7 @@ export default function AdminDashboard(){
                     onClick={() => handleSort('salary')}
                   >
                     <div className="flex items-center gap-2">
-                      Expected Salary
+                      Expected Salary (Rs) {/* Added (Rs) */}
                       {sortBy === 'salary' && (
                         <i className={`fas fa-sort-${sortOrder === 'asc' ? 'up' : 'down'} text-primary`}></i>
                       )}
@@ -424,7 +425,8 @@ export default function AdminDashboard(){
                         </div>
                       </td>
                       <td className="p-4">
-                        <div className="font-bold text-primary">${app.expected_salary?.toLocaleString() || '0'}</div>
+                        {/* Changed from $ to Rs */}
+                        <div className="font-bold text-primary">Rs {app.expected_salary?.toLocaleString('en-LK') || '0'}</div>
                         <div className="text-sm text-gray-500">
                           {app.graphic_designs === 'Yes' ? (
                             <span className="text-success">
@@ -647,11 +649,13 @@ export default function AdminDashboard(){
               {/* Salary & Comments */}
               <div>
                 <h4 className="text-lg font-semibold mb-4 text-primary">
-                  <i className="fas fa-dollar-sign mr-2"></i>Compensation & Comments
+                  <i className="fas fa-rupee-sign mr-2"></i> {/* Changed to rupee-sign */}
+                  Compensation & Comments
                 </h4>
                 <div className="mb-4">
                   <label className="text-sm text-gray-500">Expected Salary</label>
-                  <p className="text-2xl font-bold text-primary">${selectedApp.expected_salary?.toLocaleString() || '0'} / month</p>
+                  {/* Changed from $ to Rs */}
+                  <p className="text-2xl font-bold text-primary">Rs {selectedApp.expected_salary?.toLocaleString('en-LK') || '0'} / month</p>
                 </div>
                 
                 {selectedApp.comments && (
